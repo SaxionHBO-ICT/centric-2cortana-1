@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">KroegenApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail_bar">Bar</string>
+    <string name="title_activity_detail_route">DetailRouteActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="action_login">Login</string>
+    <string name="GoRegister_message">Nog geen account? Registreer nu.</string>
+    <string name="Login_Text">Login</string>
+    <string name="Password_Text">Password</string>
+    <string name="Email_Text">Email</string>
+    <string name="title_activity_bar__detail__actitvity">Bar_Detail_Actitvity</string>
+</resources>
