@@ -1,9 +1,214 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/loginContainer"
-    android:name="com.example.larsmeulenbroek.kroegenapp.Fragments.LoginActivityFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:layout="@layout/fragment_login" />
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/sign_out_and_disconnect"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/PrimaryColor"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <RelativeLayout
+                android:id="@+id/profile_background_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:background="@drawable/profile_background_image">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/profilepic" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="74.75"
+                    android:background="@drawable/carbon_fibre_texture"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/tvProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="3.5"
+                        android:singleLine="false"
+                        android:text="Name placeholder"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tvProfileEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6.5"
+                        android:text="Email placeholder"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/PrimaryDarkColor">
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="24.75"
+                    android:background="@color/dark_grey"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <FrameLayout
+                        android:id="@+id/flProfileDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:background="@color/PrimaryDarkColor"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/profile_icon_profile_screen_white" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <FrameLayout
+                    android:id="@+id/flFavorites"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.99"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|center"
+                        android:layout_weight="5"
+                        android:background="@drawable/is_favorite" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:text="favorieten" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02"
+                    android:background="@color/dark_grey" />
+
+                <FrameLayout
+                    android:id="@+id/flMyRoutes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.99"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|center"
+                        android:layout_weight="5"
+                        android:background="@drawable/route_icon_grey" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:text="Mijn routes" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/profile_background_layout_lower"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/round_corner_button"
+                    android:layout_gravity="center"
+                    android:text="Sign out"
+                    android:id="@+id/btn_signout" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

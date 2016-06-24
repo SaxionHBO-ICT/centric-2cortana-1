@@ -3,13 +3,17 @@
     <item >
 
         <shape android:shape="rectangle" android:padding="10dp">
-            <solid android:color="#16FFFFFF"/>
+            <solid android:color="#95FFFFFF"/>
             <corners
                 android:bottomRightRadius="15dp"
                 android:bottomLeftRadius="15dp"
                 android:topLeftRadius="15dp"
                 android:topRightRadius="15dp"/>
+            <stroke android:width="0.5dp"
+                android:color="#50151515">
+            </stroke>
         </shape>
+
     </item>
 
 </selector>

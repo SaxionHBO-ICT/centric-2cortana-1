@@ -5,17 +5,21 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import com.example.larsmeulenbroek.kroegenapp.activities.DetailBarActivity;
+import com.example.larsmeulenbroek.kroegenapp.activities.DetailBarScrollActivity;
 import com.example.larsmeulenbroek.kroegenapp.activities.MainActivity;
 
 /**
  * Created by Lars Meulenbroek on 5/24/2016.
  */
+/*
+Perform background operation asynchronously, to go to the detail acitivity of a bar
+*/
 public class LoadBarDetailActivityTask extends AsyncTask<Integer, Void, Void>{
 
-    protected int position;
+    protected int bar_id;
 
-    Context context;
+    private Context context;
+
     public LoadBarDetailActivityTask(Context context) {
         this.context = context.getApplicationContext();
     }
@@ -23,18 +27,18 @@ public class LoadBarDetailActivityTask extends AsyncTask<Integer, Void, Void>{
 
     @Override
     protected Void doInBackground(Integer... params) {
-        position = params[0];
+        bar_id = params[0];
         return null;
     }
 
     @Override
     protected void onPostExecute(Void aVoid) {
         Bundle positionBundle = new Bundle();
-        positionBundle.putInt(MainActivity.BAR_POSITION, position);
+        positionBundle.putInt(MainActivity.BAR_ID, bar_id);
 
-        final Intent intent = new Intent(context, DetailBarActivity.class);
+        final Intent intent = new Intent(context, DetailBarScrollActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra(MainActivity.BAR_POSITION_BUNDLE, positionBundle);
+        intent.putExtra(MainActivity.BAR_ID_BUNDLE, positionBundle);
         context.startActivity(intent);
     }
 }

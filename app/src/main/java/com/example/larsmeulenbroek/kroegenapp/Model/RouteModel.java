@@ -6,21 +6,17 @@ import java.util.List;
 /**
  * Created by Lars Meulenbroek on 5/23/2016.
  */
+/*
+class which has 1 instance
+1> the route list
+ */
 public class RouteModel {
 
     private static List<Route> routeList = new ArrayList<>();
-    private static boolean addRoutes = true;
 
-
+    //get routelist
     public static List<Route> getInstance() {
-        if(addRoutes) {
-            addRoutes();
-            addRoutes = false;
-        }
         return routeList;
     }
 
-    private static void addRoutes() {
-        routeList.add(new Route("Epic", "best Route ever"));
-    }
 }

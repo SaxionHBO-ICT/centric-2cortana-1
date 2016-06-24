@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:focusableInTouchMode="true">
+    <EditText
+        android:textCursorDrawable="@null"
+        android:cursorVisible="true"
+        android:inputType="text"
+        android:gravity="center"
+        android:hint="@string/zoek_kroegen"
+        android:imeOptions="actionSearch"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editSearchInResults"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listSearchResults"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

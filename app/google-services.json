@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "440972333302",
+    "project_id": "kroegenapp"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440972333302:android:534e35167b7301db",
+        "android_client_info": {
+          "package_name": "com.example.larsmeulenbroek.kroegenapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440972333302-6c628b595hir5s0ua7uc3k5gsep63hso.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.larsmeulenbroek.kroegenapp",
+            "certificate_hash": "FEF094DC9901A94BA2D27B059A72E10B91BE3075"
+          }
+        },
+        {
+          "client_id": "440972333302-i5br7ndo4iqc454kjvv5e3e4og1s5lrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp1t7jh_pTTNJKyg0DQMNg6zu8tCRh8OE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

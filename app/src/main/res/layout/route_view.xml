@@ -1,33 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="75dp"
-    android:weightSum="100">
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:id="@+id/barBackground"
+    android:weightSum="10"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivRouteImage"
-        android:layout_weight="20" />
-
-    <LinearLayout
-        android:orientation="vertical"
+    <FrameLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="80">
+        android:layout_weight="2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name Placeholder"
-            android:id="@+id/tvRouteName"
-            android:textSize="24dp" />
+        <ImageView
+            android:id="@+id/ivRouteImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="fitStart"
+            android:layout_weight="2"
+            android:contentDescription="Route Image"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" />
+    </FrameLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Theme placeholder"
-            android:id="@+id/tvRouteTheme" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6.5"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvRouteName"
+                android:text="Name placeholder"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvRouteTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:text="theme placeholder" />
+
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
